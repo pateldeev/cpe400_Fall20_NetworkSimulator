@@ -17,10 +17,6 @@ args = arg_parser.parse_args()
 WORLD_SIZE = (5000, 5000)
 SCREEN_SIZE = (1920, 1080)
 
-# REMOVE
-args.network_file = 'config_files/sim01_nodes.txt'
-args.packets_file = 'config_files/sim01_packets.txt'
-
 if __name__ == '__main__':
     print('Starting Simulation')
 

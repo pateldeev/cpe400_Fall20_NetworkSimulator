@@ -85,7 +85,11 @@ class NetworkNode:
 		# Sort according to criteria defined by ECR paper. Pick optimally know route.
 		for dst, entries in self.rmt.items():
 			if len(entries) > 1:
-				entries.sort(key=lambda e, rmt=self.rmt: (e[1], rmt[e[0]][0][1]), reverse=True)
+				try:
+					entries.sort(key=lambda e, rmt=self.rmt: (e[1], max([0] + [next_hop_entry[1] for next_hop_entry in rmt[e[0]]])), reverse=True)
+				except:
+					print(self.rmt)
+					exit()
 
 	# Update or create rmt entry for specific destination and next_hop pair. See associated paper for details.
 	# Returns: (lat_r, discount factor)
@@ -319,7 +323,7 @@ class NetworkNode:
 				next_hop, _, _ = self.get_best_route(msg.src)
 				if next_hop:
 					msg.rt.append([self.name])
-					pkt = PT.Packet(current_node=self.name, next_hop=next_hop, msg=msg, sent_ts=packet.send_ts)
+					pkt = PT.Packet(current_node=self.name, next_hop=next_hop, msg=msg, sent_ts=packet.sent_ts)
 					new_pkts.append(pkt)
 
 		else:
