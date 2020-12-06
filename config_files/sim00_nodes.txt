@@ -1,0 +1,29 @@
+# <NODE DEF>: Name X Y BatteryLevel
+# <LINK>: Node1 Node2
+
+A 100 700 0.9
+B 300 500 1.0
+C 300 900 0.5
+D 500 900 1.0
+E 500 500 0.5
+F 400 800 0.0
+G 400 600 1.0
+H 400 700 0.1
+Z 700 700 1.0
+
+A B
+B E
+E Z
+
+A C
+C D
+D Z
+
+A F
+F Z
+
+A G
+G Z
+
+A H
+H Z
