@@ -1,6 +1,6 @@
 import Constants as C
 
-# Logging class to help make it easier to log data to files and terminal
+# Logging class to help make it easier to log data to files and terminal.
 class NetworkLogger:
     # Initialize logging files.
     def __init__(self, log_full_fn, log_packets_fn, log_error_fn, log_performance_fn, log_energy_fn):
@@ -10,6 +10,7 @@ class NetworkLogger:
         self.log_performance = open(log_performance_fn, 'w')
         self.log_energy = open(log_energy_fn, 'w')
 
+        # Hold buffer of packet data to display to screen. Also count number of errors.
         self.pkt_buffer = []
         self.num_errors = 0
 

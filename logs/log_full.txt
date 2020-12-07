@@ -292,9 +292,9 @@ Attempting to send the required simulation packets
   Node [A] sending pkt [10] to destination [X] through known route with next hop [B].
   Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [10] to destination [Y] through known route with next hop [F].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [10] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -536,8 +536,8 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [20] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [20] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
@@ -784,11 +784,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [30] to destination [X] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [30] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [30] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -1030,11 +1030,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [40] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [40] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [40] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -1278,11 +1278,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [50] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [50] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [50] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -1526,11 +1526,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [60] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [60] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [60] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -1774,11 +1774,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [70] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [70] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [70] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -2022,11 +2022,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [80] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [80] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [80] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -2270,11 +2270,11 @@ Updating the [16] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [90] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [90] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [90] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -2585,11 +2585,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [6] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [6] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [100] to destination [X] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [100] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [100] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -2985,14 +2985,14 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [16] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [16] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [110] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [110] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [110] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [37] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -3375,14 +3375,14 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [26] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [26] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [120] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [120] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
   Node [A] sending pkt [120] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [33] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -3762,11 +3762,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [36] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [36] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [130] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [130] to destination [Y] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [130] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -4153,11 +4153,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [46] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [46] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [140] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [140] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [140] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -4541,11 +4541,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [56] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [56] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [150] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [150] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [150] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -4929,11 +4929,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [66] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [66] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [160] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [160] to destination [Y] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [160] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -5317,8 +5317,8 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [76] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [76] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [170] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [170] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
@@ -5705,11 +5705,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [86] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [86] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [180] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [180] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [180] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -6092,11 +6092,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [96] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [96] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [190] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [190] to destination [Y] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [190] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -6480,8 +6480,8 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [106] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [106] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [200] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [200] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
@@ -6868,11 +6868,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [116] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [116] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [210] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [210] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [210] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -7274,14 +7274,14 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [126] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [126] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [220] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [220] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [220] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [35] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -7663,14 +7663,14 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [136] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [136] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [230] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [230] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
   Node [A] sending pkt [230] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [32] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -8060,11 +8060,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [146] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [146] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [240] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [240] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [240] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -8462,11 +8462,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [156] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [156] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [250] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [250] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [250] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -8859,11 +8859,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [166] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [166] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [260] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [260] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [260] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -9260,11 +9260,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [176] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [176] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [270] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [270] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [270] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -9661,11 +9661,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [186] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [186] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [280] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [280] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [280] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -10062,11 +10062,11 @@ Attempting to send the required simulation packets
   Node [Y] sending pkt [196] to destination [A] through known route with next hop [G].
   Node [Z] sending pkt [196] to destination [A] through known route with next hop [E].
   Node [A] sending pkt [290] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [290] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [290] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -10398,8 +10398,8 @@ Updating the [12] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [300] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [300] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
@@ -10636,8 +10636,8 @@ Updating the [12] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [310] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [310] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
@@ -10878,11 +10878,11 @@ Updating the [17] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [320] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [320] to destination [Y] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [320] to destination [Z] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Z]
@@ -11121,14 +11121,14 @@ Updating the [15] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [330] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [330] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [330] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [22] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -11365,14 +11365,14 @@ Updating the [13] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [340] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [340] to destination [Y] through known route with next hop [F].
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
   Node [A] sending pkt [340] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [21] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -11607,14 +11607,14 @@ Updating the [13] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [350] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [350] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [350] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [21] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -11851,14 +11851,14 @@ Updating the [13] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [360] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [360] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [360] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [21] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -12095,14 +12095,14 @@ Updating the [13] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [370] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [370] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [370] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [21] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -12339,14 +12339,14 @@ Updating the [13] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [380] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [380] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [380] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [21] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -12583,14 +12583,14 @@ Updating the [13] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [390] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [390] to destination [Y] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [390] to destination [Z] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Z]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 
 Done updating: there are now [21] in-flight packets.
 ||||||||||||||||||||||||||||||||||
@@ -12813,12 +12813,12 @@ Updating the [11] in-flight packets
 
 Attempting to send the required simulation packets
   Node [A] sending pkt [400] to destination [X] through known route with next hop [B].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [X]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [X]
   Node [A] sending pkt [400] to destination [Y] through known route with next hop [D].
-  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [B] to get updated information on route to [Y]
   Node [A] selectively sending out RD message to [D] to get updated information on route to [Y]
+  Node [A] selectively sending out RD message to [F] to get updated information on route to [Y]
   Node [A] sending pkt [400] to destination [Z] through known route with next hop [D].
   Node [A] selectively sending out RD message to [F] to get updated information on route to [Z]
 

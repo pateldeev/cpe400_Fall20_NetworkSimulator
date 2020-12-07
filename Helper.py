@@ -1,6 +1,6 @@
 import math
 
-from NetworkNode import NetworkNode
+import NetworkNode as NN
 
 
 # Clamp value between bounds.
@@ -62,9 +62,9 @@ def load_nodes(f_n):
 			nodes_dict[n_2].links.add(n_1)
 
 		elif len(ln_items) == 4:
-			# Read node name and location
+			# Read node name and location.
 			n, x, y, b = ln_items
-			nodes_dict[n] = NetworkNode(n, (int(x), int(y)), float(b))
+			nodes_dict[n] = NN.NetworkNode(n, (int(x), int(y)), float(b))
 		else:
 			assert False, 'Check nodes input file format!'
 
@@ -77,7 +77,7 @@ def load_simulation_packets(f_n):
 	pkts = []
 
 	for ln in gen_file_lines(f_n):
-		ln_items = ln.strip().split(' ')
+		ln_items = ln.split(' ')
 		if len(ln_items) == 3:
 			s, d, t = ln_items
 			c = -1

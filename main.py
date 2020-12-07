@@ -1,5 +1,6 @@
 import argparse
 
+import Constants as C
 import Helper as H
 from NetworkSimulation import NetworkSimulation as NS
 
@@ -14,18 +15,14 @@ arg_parser.add_argument('--log_file_performance', help='Output Log file for perf
 arg_parser.add_argument('--log_file_energy', help='Output Log file for energies.', type=str, default='logs/log_energy.txt')
 args = arg_parser.parse_args()
 
-# Set constants for the screen and world size.
-WORLD_SIZE = (5000, 5000)
-SCREEN_SIZE = (1920, 1080)
-
 if __name__ == '__main__':
     print('Starting Simulation')
 
     # Create simulation environment.
     log_files = (args.log_file_full, args.log_file_packets, args.log_file_errors, args.log_file_performance, args.log_file_energy)
-    ns = NS(WORLD_SIZE, SCREEN_SIZE, log_files)
+    ns = NS(C.WORLD_SIZE, C.SCREEN_SIZE, log_files)
 
-    # Setup network.
+    # Setup network and get packets that need to be simulated.
     nodes_dict = H.load_nodes(args.network_file)
     sim_packets = H.load_simulation_packets(args.packets_file)
     ns.setup(nodes_dict, sim_packets)
@@ -33,14 +30,14 @@ if __name__ == '__main__':
     # Run simulation.
     ns.run()
 
-    # Print some results.
+    # Print results.
     print('|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
-    print('Simulation Done')
+    print('Simulation Done!')
     print("Simulation lasted [{}] simulation time steps or [{}] secs in real time".format(ns.ts, ns.ts / 1000))
-    print("There were [{}] instances of a handled error in routing packets!".format(ns.log.num_errors))
+    print("There were [{}] instances of a handled error in routing packets.".format(ns.log.num_errors))
     print("\nFor details see the various log files:")
     print("  Full log file (contains terminal output):", log_files[0])
-    print("  Packets log file (contains log of how simulation packets were sent/received):", log_files[1])
-    print("  Errors log file (contains log of any errors handled by protocol):", log_files[2])
-    print("  Performance log file (contains log of protocol performance data):", log_files[3])
-    print("  Energy log file (contains log of average network energy):", log_files[4])
+    print("  Packets log file (contains log of how individual simulation packets were sent, forwarded, and received):", log_files[1])
+    print("  Error log file (contains log of any errors handled by the protocol. Includes necessary resending of packets):", log_files[2])
+    print("  Performance log file (contains log of how packets were routed):", log_files[3])
+    print("  Energy log file (contains log of average network energy at each simulation time-step):", log_files[4])

@@ -6,7 +6,7 @@ import PacketTypes as PT
 
 
 # A NetworkNode (router) consists of
-#   - name: name string
+#   - name: name as string
 #   - xy: location pair
 #   - links: set of links to neighboring nodes (name of nodes).
 #   - battery: battery level between 0.0 (dead) and 1.0 (full).
@@ -15,6 +15,8 @@ import PacketTypes as PT
 #          the rmt is represented by a dictionary mapping each destination node to all its rmt entries
 #   - p_hat: estimated number of packets to be sent by node over the next time-step.
 #   - p_sample: total number of packets sent over the last time-step.
+#   - Various variables to keep track of RD and RU messages that have been recently served/sent.
+#   - Various variables to keep track of RP messages send and received. Needed for performance metrics.
 class NetworkNode:
 	# Create Node
 	def __init__(self, name, xy, battery):
@@ -143,6 +145,9 @@ class NetworkNode:
 						neighbors_sent.add(next_hop)
 			if neighbors_filter is None:
 				self.rd_in_flight[dst] = ts
+
+		# Sort packets by next_hop to ensure deterministic simulation.
+		rd_pkts.sort(key=lambda pkt: pkt.next_hop)
 
 		return rd_pkts, timeout_error
 
