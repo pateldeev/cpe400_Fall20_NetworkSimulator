@@ -7,10 +7,11 @@ from NetworkSimulation import NetworkSimulation as NS
 arg_parser = argparse.ArgumentParser(description='Simulates the ECR routing protocol.')
 arg_parser.add_argument('--network_file', help='Path to network file defining nodes and links.', type=str, required=True)
 arg_parser.add_argument('--packets_file', help='Path to packets file defining what packets should be simulated at what times.', type=str, required=True)
-arg_parser.add_argument('--log_file_full', help='Output Log file', type=str, default='log_full.txt')
-arg_parser.add_argument('--log_file_packets', help='Output Log file for simulation packets sent.', type=str, default='log_packets.txt')
-arg_parser.add_argument('--log_file_errors', help='Output log file for errors.', type=str, default='log_errors.txt')
-arg_parser.add_argument('--log_file_performance', help='Output Log file for performance.', type=str, default='log_perforamance.txt')
+arg_parser.add_argument('--log_file_full', help='Output Log file', type=str, default='logs/log_full.txt')
+arg_parser.add_argument('--log_file_packets', help='Output Log file for simulation packets sent.', type=str, default='logs/log_packets.txt')
+arg_parser.add_argument('--log_file_errors', help='Output log file for errors.', type=str, default='logs/log_errors.txt')
+arg_parser.add_argument('--log_file_performance', help='Output Log file for performance.', type=str, default='logs/log_performance.txt')
+arg_parser.add_argument('--log_file_energy', help='Output Log file for energies.', type=str, default='logs/log_energy.txt')
 args = arg_parser.parse_args()
 
 # Set constants for the screen and world size.
@@ -21,7 +22,7 @@ if __name__ == '__main__':
     print('Starting Simulation')
 
     # Create simulation environment.
-    log_files = (args.log_file_full, args.log_file_packets, args.log_file_errors, args.log_file_performance)
+    log_files = (args.log_file_full, args.log_file_packets, args.log_file_errors, args.log_file_performance, args.log_file_energy)
     ns = NS(WORLD_SIZE, SCREEN_SIZE, log_files)
 
     # Setup network.
@@ -42,3 +43,4 @@ if __name__ == '__main__':
     print("  Packets log file (contains log of how simulation packets were sent/received):", log_files[1])
     print("  Errors log file (contains log of any errors handled by protocol):", log_files[2])
     print("  Performance log file (contains log of protocol performance data):", log_files[3])
+    print("  Energy log file (contains log of average network energy):", log_files[4])

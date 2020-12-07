@@ -33,3 +33,6 @@ ECR_gamma = 0.98  # Discount factor for times.
 ECR_RD_Timeout = 100  # If route is still not found after 100 time-steps, an error has occurred.
 ECR_RD_Resend = 10  # After this many packets are sent along a specific route, the sending node will send out another round of RD packets to get updated information along any known suboptimal routes.
 ECR_RU_MinInterval = 5  # Minimum interval a node must wait before sending update messages for a given route again.
+
+# If execution should be sped up by avoiding print statements to terminal and not having any time between auto steps.
+SPEED_UP_EXECUTION = False

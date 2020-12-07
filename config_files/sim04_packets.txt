@@ -2,7 +2,9 @@
 # <SEND PACKETS LIMIT>: Src Dest StartTs Limit
 
 A X 0 
+A Y 0 
 A Z 0  
 
-A Y 50 100
-A Y 60 100
+X A 100 200
+Y A 100 200
+Z A 100 200

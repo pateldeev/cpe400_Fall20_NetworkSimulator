@@ -2,46 +2,9 @@ from collections import defaultdict
 
 import Constants as C
 import Helper as H
+import NetworkLogger as NL
 
 import arcade as arc
-
-
-# Logging class to help make it easier to log data to files and terminal
-class NetworkLogger:
-    # Initialize logging files.
-    def __init__(self, log_full_fn, log_packets_fn, log_error_fn, log_performance_fn):
-        self.log_full = open(log_full_fn, 'w')
-        self.log_packets = open(log_packets_fn, 'w')
-        self.log_error = open(log_error_fn, 'w')
-        self.log_performance = open(log_performance_fn, 'w')
-
-        self.pkt_buffer = []
-        self.num_errors = 0
-
-    # Log information to various logs.
-    def write(self, log_str, is_full=True, is_packet=False, is_error=False, is_performance=False):
-        if is_full:
-            print(log_str)
-            self.log_full.write(log_str + '\n')
-        if is_packet:
-            self.log_packets.write(log_str + '\n')
-            self.pkt_buffer.append(log_str)
-            if len(self.pkt_buffer) > C.PKT_INFO_MAX_LINES:
-                self.pkt_buffer.pop(0)
-        if is_error:
-            self.log_error.write(log_str + '\n')
-            if not log_str.startswith("ts:"):
-                self.num_errors += 1
-        if is_performance:
-            self.log_performance.write(log_str + '\n')
-
-    # Destructor for file cleanup
-    def __del__(self):
-        self.log_performance.close()
-        self.log_error.close()
-        self.log_packets.close()
-        self.log_full.close()
-
 
 # Class to hold simulation.
 class NetworkSimulation(arc.Window):
@@ -66,16 +29,14 @@ class NetworkSimulation(arc.Window):
         self.nodes, self.node_rectangles, self.node_links = {}, {}, {}
 
         # Variables dealing with simulation of packets.
-        self.pkts_schedule = []
-        self.pkts_schedule_original_copy = []
+        self.pkts_schedule = self.pkts_schedule_original_copy = []
         self.pkts_inflight = []
 
-        # Holds a list of the network energy at every simulation time.
-        self.network_energy = []
-        self.network_energy_nodes = defaultdict(list)
+        # Holds a map from every node to a list of the node's energy at every simulation time.
+        self.network_energy = defaultdict(list)
 
         # Create logger.
-        self.log = NetworkLogger(*log_files)
+        self.log = NL.NetworkLogger(*log_files)
 
         # Variables for information text.
         self.text_info = "Sim ts: [{}]\n\n" \
@@ -282,7 +243,7 @@ class NetworkSimulation(arc.Window):
         # Handle auto stepping.
         if self.auto_step:
             self.auto_step_ts -= delta_time
-            if self.auto_step_ts <= 0:
+            if self.auto_step_ts <= 0 or C.SPEED_UP_EXECUTION:
                 self.needs_update = True
                 self.auto_step_ts = 1 / self.auto_step_speed
 
@@ -291,8 +252,8 @@ class NetworkSimulation(arc.Window):
             self.ts += 1
             self.log.write("ts: [{:05d}]  In-Flight at start [{}]".format(self.ts, len(self.pkts_inflight)), is_full=True, is_packet=True, is_error=True)
 
-            print('Schedule: ', self.pkts_schedule)
-            print('Flight: ', self.pkts_inflight)
+            # print('Schedule: ', self.pkts_schedule)
+            # print('Flight: ', self.pkts_inflight)
 
             # Update and maintain links.
             # Each node updates its lat estimate and passes it to neighbors.
@@ -309,13 +270,12 @@ class NetworkSimulation(arc.Window):
             self.log.write("\nAttempting to send the required simulation packets")
             self.attempt_scheduled_send()
 
-            # Update energy history.
-            self.network_energy.append(sum(n.battery for _, n in self.nodes.items()) / len(self.nodes))
+            # Store energy history.
             for n_name, n in self.nodes.items():
-                self.network_energy_nodes[n_name].append(n.battery)
+                self.network_energy[n_name].append(n.battery)
 
-            print('\nSchedule: ', self.pkts_schedule)
-            print('Flight: ', self.pkts_inflight)
+            # print('\nSchedule: ', self.pkts_schedule)
+            # print('Flight: ', self.pkts_inflight)
 
             # Update is done. Wait until next ts.
             self.needs_update = False
@@ -338,7 +298,7 @@ class NetworkSimulation(arc.Window):
 
         # Log simulation packet stats.
         for t, src, dst, cnt in self.pkts_schedule_original_copy:
-            rt_name = H.get_route_name(src, dst)
+            rt_name = H.get_route_name(src=src, dst=dst)
 
             # Display link information
             if cnt < 0:
@@ -356,19 +316,19 @@ class NetworkSimulation(arc.Window):
                 if rp_sent_end_times[next_hop] > t_start:
                     continue
 
-                t_end = t_start
-                rp_cnt = 0
+                t_end = t_start + 1
+                rp_cnt = 1
                 j = i + 1
                 while j < len(rp_sent):
-                    if rp_sent[j][0] > t_end + 1:
+                    sent_ts, sent_node = rp_sent[j]
+                    if sent_ts > t_end + 1:
                         break
-
-                    if rp_sent[j][1] == next_hop:
-                        t_end += 1
+                    elif sent_node == next_hop:
+                        t_end = sent_ts + 1
                         rp_cnt += 1
-
                     j += 1
-                rp_sent_end_times[next_hop] = t_end + 1
+
+                rp_sent_end_times[next_hop] = t_end
                 log_strs.append("    ts: [{:05d}]-[{:05d}]: [{}] sent [{}] packets through [{}]".format(t_start, t_end, src, rp_cnt, next_hop))
             for s in sorted(log_strs):
                 self.log.write(s, is_full=False, is_performance=True)
@@ -382,31 +342,30 @@ class NetworkSimulation(arc.Window):
                 if rp_received_end_times[prev_hop] > t_start:
                     continue
 
-                t_end = t_start
-                rp_cnt = 0
+                t_end = t_start + 1
+                rp_cnt = 1
                 j = i + 1
                 while j < len(rp_received):
-                    if rp_received[j][0] > t_end + 1:
+                    received_ts, received_node = rp_received[j]
+                    if received_ts > t_end + 1:
                         break
-
-                    if rp_received[j][1] == prev_hop:
-                        t_end += 1
+                    elif received_node == prev_hop:
+                        t_end += received_ts + 1
                         rp_cnt += 1
-
                     j += 1
-                rp_received_end_times[prev_hop] = t_end + 1
+
+                rp_received_end_times[prev_hop] = t_end
                 log_strs.append("    ts: [{:05d}]-[{:05d}]: [{}] received [{}] packets via [{}]".format(t_start, t_end, dst, rp_cnt, prev_hop))
             for s in sorted(log_strs):
                 self.log.write(s, is_full=False, is_performance=True)
 
         # Log energy history.
-        self.log.write("\nEnergy History:", is_full=False, is_performance=True)
-        for i, e in enumerate(self.network_energy):
-            self.log.write("  [{:05d}] [{:.5f}]".format(i + 1, e), is_full=False, is_performance=True)
-
-        with open('energy.txt', 'w') as f:
-            for e in self.network_energy_nodes['A']:
-                f.write("{:.5f}\n".format(e))
+        self.log.write("Energy History:", is_full=False, is_energy=True)
+        if self.ts >= 1:
+            n_nodes = len(self.network_energy)
+            for i in range(len(self.network_energy[next(iter(self.network_energy))])):
+                avg_energy = sum(energies[i] for _, energies in self.network_energy.items()) / n_nodes
+                self.log.write("{:.5f}".format(avg_energy), is_full=False, is_energy=True)
 
         # Close the window and cleanup.
         arc.close_window()
@@ -494,7 +453,7 @@ class NetworkSimulation(arc.Window):
                                     "  LAT_n: [{:.7f}]".format(node.lat),
                                     "\n  P_Sample: [{:.7f}]".format(node.p_sample),
                                     "  P_Hat: [{}]".format(node.p_hat),
-                                    "\n  RMT\n    (dst, next-hop, lat_r, d_f):",
+                                    "\n  RMT:\n    [dst] [next hop] [lat_r] [d_f]",
                                     ]
                         if not node.rmt:
                             info_txt.append("    RMT is empty!")
@@ -502,7 +461,7 @@ class NetworkSimulation(arc.Window):
                             node.sort_rmt()
                             for dst, entries in sorted(node.rmt.items()):
                                 for next_hop, lat_r, d_f in entries:
-                                    info_txt.append("    [{}] [{}] [{:.5f}] [{:.5f}]".format(dst, next_hop, lat_r, d_f))
+                                    info_txt.append("    [{}] [{}] [{:.5f}] [{:02d}]".format(dst, next_hop, lat_r, d_f))
 
                         # Log and display text.
                         for t in info_txt:

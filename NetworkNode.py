@@ -85,11 +85,7 @@ class NetworkNode:
 		# Sort according to criteria defined by ECR paper. Pick optimally know route.
 		for dst, entries in self.rmt.items():
 			if len(entries) > 1:
-				try:
-					entries.sort(key=lambda e, rmt=self.rmt: (e[1], max([0] + [next_hop_entry[1] for next_hop_entry in rmt[e[0]]])), reverse=True)
-				except:
-					print(self.rmt)
-					exit()
+				entries.sort(key=lambda e, rmt=self.rmt: (e[1], max([0] + [next_hop_entry[1] for next_hop_entry in rmt[e[0]]])), reverse=True)
 
 	# Update or create rmt entry for specific destination and next_hop pair. See associated paper for details.
 	# Returns: (lat_r, discount factor)
@@ -298,8 +294,7 @@ class NetworkNode:
 			# Handle route update message. Add updated values to rmt table.
 			lat_r, df = self.update_or_create_rmt_entry(dst=msg.dst_route, next_hop=packet.current_node, lat_r=msg.lat, df=msg.discount, ts=ts)
 			# Update msg and continue onwards if necessary.
-			if msg.src_route != self.name:
-				assert self.rmt[msg.src_route], "No path back to source to send update! This should not happen"
+			if msg.src_route != self.name and self.rmt[msg.src_route]:
 				msg.lat = lat_r
 				msg.discount = df
 				for next_hop, _, _ in self.rmt[msg.src_route]:
